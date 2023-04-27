@@ -5,7 +5,8 @@ import random # 기능 연결(random, tkinter)
 lotto_num = range(1,46) # 1~46까지의 랜덤한 숫자를 lotto_num변수에 넣음.
 
 def buttonClick(): # 함수 생성
-    print(random.sample(lotto_num,6)) # 변수에서 6개의 랜덤한 숫자 출력
+    label = tkinter.Label(window, text=str(random.sample(lotto_num,6))) # 변수에서 6개의 랜덤한 숫자를 윈도우에 출력 (타입 리스트를 스트링으로 변환)
+    label.pack()
 
 window=tkinter.Tk() # TKinter 생성
 window.title("lotto") # 윈도우의 이름 설정
